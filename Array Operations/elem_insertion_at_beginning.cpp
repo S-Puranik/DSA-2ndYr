@@ -10,17 +10,11 @@ int main()
     cout << "Enter an element to add at the beginning of the array: ";
     cin >> add;
     int n = sizeof(Array)/sizeof(Array[0]);
-    for(int i=n; i>=0; i--)
+    for(int i=n; i>=1; i--)
     {
-        if(i==0)
-        {
-            Array[i] = add;
-            break;
-        }
-        else{
-            Array[i] = Array[i-1];
-        }
+        Array[i] = Array[i-1];
     }
+    Array[0] = add;
     for(int i =0; i<n+1; i++)
     {
         cout << Array[i] << " ";
