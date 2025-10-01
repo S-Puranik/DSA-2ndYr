@@ -44,10 +44,7 @@ struct Node * pop(struct Node *top)
 {
     struct Node *temp = top;
     if(top == NULL)
-    {
         cout << "\nStack underflow";
-        return 0;
-    }
     else
     {
         top = top -> next;
